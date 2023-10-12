@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+body,html,*{
+  font-family: 'Ubuntu', sans-serif;
+}
+.header{
+  background-image:linear-gradient(to right top, rgba(78, 29, 154,.9), rgba(78, 29, 154,.9)), url("../public/images/header-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: rgb(78, 29, 154);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.line__height__2{
+  line-height: 2rem;
 }
+/* .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+  position: absolute!important;
+  bottom: -90px!important;
+  height: 100px!important;
+} */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.swiper-pagination-bullet{
+  background-color: rgb(78, 29, 154)!important;
+  width: 30px!important;
+  height: 10px!important;
+  border-radius: 5px!important;}
+
+.swiper-pagination-bullet-active{
+  width: 35px!important;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.swiper-button-next{
+  position: absolute!important;
+  right: 0!important;
+  top: 100px!important;
+  width: 25px!important;
+  height: 25px!important;
+  font-size: 10px!important;
+  background-color: rgb(78, 29, 154)!important;
+  border-radius: 4px;
 }
-
-.App-link {
-  color: #61dafb;
+.swiper-button-next::after{
+  font-size: 10px!important;
+  color: white!important;
+  font-weight: bold!important;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.swiper-button-prev{
+  position: absolute!important;
+  left: 0!important;
+  top: 100px!important;
+  width: 25px!important;
+  height: 25px!important;
+  font-size: 10px!important;
+  background-color: rgb(78, 29, 154)!important;
+  border-radius: 4px;
+}
+.swiper-button-prev::after{
+  font-size: 10px!important;
+  color: white!important;
+  font-weight: bold!important;
+}
+.footer__bg{
+  background-color: #2C272E;
+}
+.showNav{
+  transition: all .5s ease-in-out;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.hideNav{
+  transition: all .5s ease-in-out;
+  right: -500px;
+  position: absolute;
+  top: 0;
 }
